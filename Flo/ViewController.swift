@@ -65,7 +65,7 @@ class ViewController: UIViewController {
     }
     
     func setupGraphDisplay() {
-        let noOfDays: Int = 7;
+        //let noOfDays: Int = 7;
         
         // replace last day with today's data
         graphView.graphPoints[graphView.graphPoints.count-1] = counterView.counter;
@@ -84,7 +84,7 @@ class ViewController: UIViewController {
         // today is last day of the array, need to go backwards
         
         // get today's day number
-        let dateFormatter = NSDateFormatter();
+        //let dateFormatter = NSDateFormatter();
         let calendar      = NSCalendar.currentCalendar();
         //let componentOptions: NSCalendarUnit = .CalendarUnitWeekday;
         let components    = calendar.components(.Weekday, fromDate: NSDate());
@@ -96,7 +96,6 @@ class ViewController: UIViewController {
         // set up day name labels with correct day
         for i in days.count.stride(through: 1, by:-1) {
             if let labelView = graphView.viewWithTag(i) as? UILabel {
-                print(weekday);
                 if (weekday == 7) {
                     weekday = 0;
                 }

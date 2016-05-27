@@ -30,7 +30,7 @@ import UIKit
         let height = rect.height;
         
         // set up background clipping area
-        var path = UIBezierPath(roundedRect: rect,
+        let path = UIBezierPath(roundedRect: rect,
                                 byRoundingCorners: UIRectCorner.AllCorners,
                                 cornerRadii: CGSize(width: 8.0, height: 8.0));
         path.addClip();
@@ -55,7 +55,7 @@ import UIKit
         
         // calculate x point
         let margin: CGFloat = 20.0;
-        var columnXPoint = { (column: Int) -> CGFloat in
+        let columnXPoint = { (column: Int) -> CGFloat in
             // calc gap between points
             let spacer = (width - margin*2 - 4) /
                 CGFloat((self.graphPoints.count - 1));
@@ -69,7 +69,7 @@ import UIKit
         let bottomBorder: CGFloat = 50;
         let graphHeight = height - topBorder - bottomBorder;
         let maxValue = graphPoints.maxElement();
-        var columnYPoint = { (graphPoint: Int) -> CGFloat in
+        let columnYPoint = { (graphPoint: Int) -> CGFloat in
             var y: CGFloat = CGFloat(graphPoint) /
                 CGFloat(maxValue!) * graphHeight;
             y = graphHeight + topBorder - y; // flip the graph
@@ -81,7 +81,7 @@ import UIKit
         UIColor.whiteColor().setStroke();
         
         // set up the points line
-        var graphPath = UIBezierPath();
+        let graphPath = UIBezierPath();
         // go to start of line
         graphPath.moveToPoint(CGPoint(x: columnXPoint(0), y: columnYPoint(graphPoints[0])));
         // add points for each item in graphPoints array at correct x,y
@@ -97,7 +97,7 @@ import UIKit
         CGContextSaveGState(context);
         
         // make copy of the path
-        var clippingPath = graphPath.copy() as! UIBezierPath;
+        let clippingPath = graphPath.copy() as! UIBezierPath;
         
         // add lines to the copied path
         clippingPath.addLineToPoint(CGPoint(x: columnXPoint(graphPoints.count - 1),
@@ -132,7 +132,7 @@ import UIKit
         }
         
         // draw horizontal graph lines (on top of everything)
-        var linePath = UIBezierPath();
+        let linePath = UIBezierPath();
         
         // top line
         linePath.moveToPoint(CGPoint(x: margin, y: topBorder));
