@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BD3384531CF8FCAE00FE89D3 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3384521CF8FCAE00FE89D3 /* BackgroundView.swift */; };
+		BD3384551CF93B4400FE89D3 /* MedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3384541CF93B4400FE89D3 /* MedalView.swift */; };
 		BD5DDEBD1CF75AF0002F9B8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5DDEBC1CF75AF0002F9B8E /* AppDelegate.swift */; };
 		BD5DDEBF1CF75AF0002F9B8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5DDEBE1CF75AF0002F9B8E /* ViewController.swift */; };
 		BD5DDEC21CF75AF0002F9B8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5DDEC01CF75AF0002F9B8E /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		BD3384521CF8FCAE00FE89D3 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		BD3384541CF93B4400FE89D3 /* MedalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalView.swift; sourceTree = "<group>"; };
 		BD5DDEB91CF75AF0002F9B8E /* Flo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5DDEBC1CF75AF0002F9B8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD5DDEBE1CF75AF0002F9B8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				BD5DDEBC1CF75AF0002F9B8E /* AppDelegate.swift */,
 				BD5DDEBE1CF75AF0002F9B8E /* ViewController.swift */,
 				BD5DDEC01CF75AF0002F9B8E /* Main.storyboard */,
+				BD3384541CF93B4400FE89D3 /* MedalView.swift */,
 				BD3384521CF8FCAE00FE89D3 /* BackgroundView.swift */,
 				BD5DDEC31CF75AF0002F9B8E /* Assets.xcassets */,
 				BD5DDEC51CF75AF0002F9B8E /* LaunchScreen.storyboard */,
@@ -276,6 +279,7 @@
 				BD5DDEBF1CF75AF0002F9B8E /* ViewController.swift in Sources */,
 				BD5DDEEB1CF75B48002F9B8E /* PushButtonView.swift in Sources */,
 				BD5DDEBD1CF75AF0002F9B8E /* AppDelegate.swift in Sources */,
+				BD3384551CF93B4400FE89D3 /* MedalView.swift in Sources */,
 				BD5DDEED1CF798E4002F9B8E /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
