@@ -21,6 +21,13 @@ class PushButtonView: UIButton {
     }
     */
     
+    override var highlighted:Bool {
+        didSet {
+            super.highlighted = highlighted
+            setNeedsDisplay()
+        }
+    }
+    
     override func drawRect(rect: CGRect) {
         // create round button
         let path = UIBezierPath(ovalInRect : rect);
@@ -57,6 +64,26 @@ class PushButtonView: UIButton {
         // set stroke color and draw
         UIColor.whiteColor().setStroke();
         plusPath.stroke();
+        
+        //gradient and blending
+        //gives user feedback on pressing a button
+        //need to override the highlighted property (see above)
+        //to call setNeedsDisplay()
+        
+        if self.state == .Highlighted {
+            let context = UIGraphicsGetCurrentContext()
+            let startColor = UIColor.clearColor()
+            let endColor = UIColor(hue: 0, saturation: 0, brightness: 0, alpha: 0.15)
+            let colors = [startColor.CGColor, endColor.CGColor]
+            let colorSpace = CGColorSpaceCreateDeviceRGB()
+            let colorLocations:[CGFloat] = [0.0, 1.0]
+            let gradient = CGGradientCreateWithColors(colorSpace, colors, colorLocations)
+            var startPoint = CGPointZero
+            var endPoint = CGPoint(x:0.0, y:self.bounds.height)
+            let center = CGPoint(x: CGRectGetMidX(rect), y: CGRectGetMidY(rect))
+            let radius = self.bounds.width/2
+            CGContextSetBlendMode(context, CGBlendMode.Darken)
+            CGContextDrawRadialGradient(context, gradient, center, 0, center, radius, [])
+        }
     }
-
 }
