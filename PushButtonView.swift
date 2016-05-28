@@ -23,7 +23,7 @@ class PushButtonView: UIButton {
     
     override func drawRect(rect: CGRect) {
         // create round button
-        var path = UIBezierPath(ovalInRect : rect);
+        let path = UIBezierPath(ovalInRect : rect);
         fillColor.setFill();
         path.fill();
         
@@ -32,7 +32,7 @@ class PushButtonView: UIButton {
         let plusWidth:  CGFloat = min(bounds.width, bounds.height) * 0.6;
         
         // create path
-        var plusPath = UIBezierPath();
+        let plusPath = UIBezierPath();
         
         // set path line width to height of stroke
         plusPath.lineWidth = plusHeight;
